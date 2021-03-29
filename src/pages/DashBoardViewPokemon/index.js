@@ -26,7 +26,7 @@ function DashBoardViewPokemon() {
       const { pokemon } = data;
       setPokemon(pokemon);
     })()
-  })
+  }, [])
   
   return (
     <>

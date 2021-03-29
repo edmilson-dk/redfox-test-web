@@ -45,7 +45,7 @@ function DashBoardUpdatePokemon() {
         await getPokemonData();
       }
     })()
-  });
+  }, []);
   
   const token = getUserToken();
 

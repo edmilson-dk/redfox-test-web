@@ -34,7 +34,7 @@ function DashBoardUpdateImage() {
         setPokemonName(location.state.name);
       }
     })()
-  });
+  }, []);
 
   const token = getUserToken();
   

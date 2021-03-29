@@ -80,14 +80,13 @@ function DashBoard() {
     (async () => {
       await getPokemonsData();
     })()
-  })
+  }, [])
 
   useEffect(() => {
     (async () => {
       await getPokemonsData();
     })()
   }, [queries])
-
 
   return (
     <DashboardWrapper>
