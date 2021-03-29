@@ -80,7 +80,7 @@ function DashBoard() {
     (async () => {
       await getPokemonsData();
     })()
-  }, [])
+  })
 
   useEffect(() => {
     (async () => {

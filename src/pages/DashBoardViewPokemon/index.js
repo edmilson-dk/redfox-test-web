@@ -1,9 +1,7 @@
 import { Box, Grid } from "@material-ui/core";
 import { useEffect, useState } from "react";
-import { toast } from 'react-toastify';
 
 import ContainerComponent from "../../components/Container";
-import TitleSecondary from "../../components/TitleSecondary";
 
 import API from "../../services/api";
 import useTokenStore from "../../hooks/useTokenStore";
@@ -28,27 +26,27 @@ function DashBoardViewPokemon() {
       const { pokemon } = data;
       setPokemon(pokemon);
     })()
-  }, [])
+  })
   
   return (
     <>
       <GoBackDashBoardHeader/>
       <Box bgcolor="dark.main" minHeight="100vh" display="flex" flexDirection="column" justifyContent='center' alignItems='center'>    
         <ContainerComponent>
-        <section className="maxWidthItem" style={{ paddingTop: '3rem'}}>
-        <Grid container spacing={3}>
-          {pokemon.length > 0 && (
-            <Grid key={pokemon.pokemon_number} item xs={12}>
-              <Box>
-                <CardViewPokemon
-                  data={pokemon}
-                  name={pokemonName}
-                />
-              </Box>
+          <section className="maxWidthItem" style={{ paddingTop: '3rem'}}>
+            <Grid container spacing={3}>
+              {pokemon.length > 0 && (
+                <Grid key={pokemon.pokemon_number} item xs={12}>
+                  <Box>
+                    <CardViewPokemon
+                      data={pokemon}
+                      name={pokemonName}
+                    />
+                  </Box>
+                </Grid>
+              )}
             </Grid>
-          )}
-        </Grid>
-      </section>
+          </section>
         </ContainerComponent>
       </Box>
     </>
